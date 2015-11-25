@@ -1,12 +1,14 @@
 import java.util.*;
 
-class CharactersCLITest {
+class PrintingQuotesCLITest {
     public static void main(String[] args) {
-		System.out.print(new Characters().count(requestUserInput()));
+		String quote = requestUserInput(PrintingQuotes.inputQuote());
+		String saidBy = requestUserInput(PrintingQuotes.inputSaidBy());
+		System.out.print(new PrintingQuotes().quoteAndSaidBy(quote, saidBy));
     }
 	
-	private static String requestUserInput(){
-		System.out.print(Characters.inputMessage());
+	private static String requestUserInput(String message){
+		System.out.print(message);
 		String userInput = loopTillUserEntersCorrectInput();
 		return userInput;
 	}
