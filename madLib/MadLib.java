@@ -1,23 +1,28 @@
-public class MadLib {
-    public String story(String noun, String verb, String adjective, String adverb) {
-        return new StringBuilder("Do you walk your ")
-		.append(adjective)
-		.append(" ")
-		.append(noun)
-		.append(" ")
-		.append(adverb)
-		.append("? ")
-		.append("That's hilarious!").toString();
-    }
+import java.util.*;
 
+public class MadLib {
+    public List<String> story(String noun, String verb, String adjective, String adverb) {
+        List<String> output = new ArrayList();
+		output.add("Do you walk your ");
+		output.add(adjective);
+		output.add(" ");
+		output.add(noun);
+		output.add(" ");
+		output.add(adverb);
+		output.add("? ");
+		output.add("That's hilarious!");
+		
+		return output;
+	}
+	
     public static String outputStart() {
         return "Homer has ";
-    }
-
+	}
+	
     public static String outputEnd() {
         return " MadLib.";
-    }
-
+	}
+	
     public static String[] inputMessages() {
         String inputs[] = {
 			"Enter a noun: ",
@@ -27,6 +32,6 @@ public class MadLib {
 		};
 		
 		return inputs;
-    }
-
+	}
+	
 }
