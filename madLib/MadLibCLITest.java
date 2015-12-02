@@ -25,9 +25,11 @@ class MadLibCLITest {
 		Scanner scanner = new Scanner(System.in);
 		String input = scanner.next();
 		
-		if(input.length() > 0) {
+		if(input.length() > 0) 
+		{
 			return input;
-			}else {
+		}
+		else {
 			System.out.print("Please enter some text ");
 			return null;
 		}
